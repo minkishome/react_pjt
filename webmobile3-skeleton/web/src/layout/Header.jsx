@@ -11,7 +11,8 @@ import AccountCircle from "@material-ui/icons/AccountCircle";
 import { CommonContext } from "../context/CommonContext";
 import LoginPage from '../pages/LoginPage';
 import { Link } from 'react-router-dom';
-
+import { Navbar, Nav, NavItem, NavDropdown, MenuItem, FormGroup, FormControl } from 'react-bootstrap';
+import { ButtonDropdown } from "reactstrap";
 
 const useStyles = makeStyles(theme => ({
   appBar: {
@@ -42,15 +43,20 @@ const Header = props => {
   return (
     <AppBar position="fixed" className={classes.appBar}>
       <Toolbar>
-        <IconButton
+        <ButtonDropdown
           color="inherit"
           aria-label="open drawer"
           onClick={onClickDrawerOpenHandler}
           edge="start"
           className={classes.menuButton}
         >
-          <MenuIcon />
-        </IconButton>
+          <MenuIcon>
+            <MenuItem>hmmmm....</MenuItem>
+            <MenuItem>hmmmm....</MenuItem>
+            <MenuItem>hmmmm....</MenuItem>
+          </MenuIcon>
+
+        </ButtonDropdown>
         <Typography variant="h6" className={classes.title} >
           <Link to ='/'>
           VoteOn
